@@ -10,7 +10,7 @@ export default function Paper({
   className?: string;
 }) {
   return (
-    <div className={`bg-paper/40 backdrop-blur-sm ${className}`}>
+    <div className={`bg-paper/70 backdrop-blur-sm ${className}`}>
       {children}
     </div>
   );

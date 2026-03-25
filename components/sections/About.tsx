@@ -1,13 +1,13 @@
 "use client";
 
 import SectionHeader from "@/components/SectionHeader";
-import Paper from "@/components/Paper";
+import Card from "@/components/Card";
 import Button from "@/components/Button";
 import Timeline from "@/components/sections/Timeline";
 
 export default function About() {
   return (
-    <div className="app-container pt-14 md:pt-24">
+    <div className="app-container pt-14 md:pt-24" id="about">
       <div className="text-center">
         <SectionHeader
           heading="About Me"
@@ -16,7 +16,7 @@ export default function About() {
         />
       </div>
       <div className="grid lg:grid-cols-3 gap-8 items-start mt-12">
-        <Paper className="col-span-2 border border-primary rounded-4xl p-8">
+        <Card className="col-span-2">
           <h4 className="text-heading text-xl font-semibold">
             I&lsquo;m a Full-stack Developer
           </h4>
@@ -73,8 +73,8 @@ export default function About() {
               </div>
             </div>
           </div>
-        </Paper>
-        <Paper className="col-span-2 lg:col-span-1 border border-primary rounded-4xl p-8">
+        </Card>
+        <Card className="col-span-2 lg:col-span-1 border border-primary rounded-4xl p-8">
           <div className="flex items-center space-x-2">
             <svg
               className="h-7 w-auto text-primary"
@@ -125,7 +125,7 @@ export default function About() {
               </>
             }
           />
-        </Paper>
+        </Card>
       </div>
     </div>
   );
