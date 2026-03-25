@@ -1,6 +1,8 @@
 "use client";
 
 import FrontEnd from "@/components/sections/FrontEnd";
+import BackEnd from "@/components/sections/Backend";
+import Database from "@/components/sections/Database";
 import SectionHeader from "@/components/SectionHeader";
 
 export default function Skills() {
@@ -14,6 +16,8 @@ export default function Skills() {
         />
       </div>
       <FrontEnd />
+      {/* <BackEnd /> */}
+      <Database />
     </div>
   );
 }

@@ -27,7 +27,7 @@ const nodes = [
   {
     type: "Javascript",
     label: <JavascriptIcon className="h-6 w-6" />,
-    className: "top-1/2 -right-5 -translate-y-1/2",
+    className: "top-1/2 -right-0 -translate-y-1/2",
   },
   {
     type: "Bootstrap",
@@ -47,7 +47,7 @@ const nodes = [
   {
     type: "Tailwind",
     label: <TailwindIcon className="h-6 w-6" />,
-    className: "top-1/2 -left-5 -translate-y-1/2",
+    className: "top-1/2 left-0 -translate-y-1/2",
   },
   {
     type: "Mui",
