@@ -16,7 +16,7 @@ export default function Skills() {
         />
       </div>
       <FrontEnd />
-      {/* <BackEnd /> */}
+      <BackEnd />
       <Database />
     </div>
   );

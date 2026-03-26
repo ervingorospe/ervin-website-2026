@@ -91,7 +91,7 @@ export default function FrontEnd() {
   );
 
   return (
-    <div className="grid lg:grid-cols-2 gap-8 items-center">
+    <div className="grid lg:grid-cols-2 gap-12 items-center">
       <div className="flex items-center justify-center sm:min-h-[750px] lg:min-h-[520px] xl:min-h-[750px]">
         <RadialTechLarge
           type={type}

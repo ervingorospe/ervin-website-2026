@@ -10,7 +10,7 @@ const Node = React.memo(function Node({
   type,
   selectedType,
 }: {
-  className: string;
+  className?: string;
   label: React.ReactNode;
   onClick: (label: string) => void;
   type: string;

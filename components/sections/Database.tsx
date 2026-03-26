@@ -57,7 +57,7 @@ const contents = [
 ];
 
 export default function Database() {
-  const [type, setType] = useState<string>("Frontend");
+  const [type, setType] = useState<string>("Database");
 
   const selectedContent = useMemo(
     () => contents.find((item) => item.type === type),
