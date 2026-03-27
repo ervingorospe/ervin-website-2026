@@ -103,7 +103,9 @@ export default function FrontEnd() {
         />
       </div>
 
-      <SkillDescription selectedContent={selectedContent} />
+      <div className="-mt-16 sm:-mt-24 lg:mt-0">
+        <SkillDescription selectedContent={selectedContent} />
+      </div>
     </div>
   );
 }
