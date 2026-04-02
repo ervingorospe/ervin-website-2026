@@ -7,7 +7,7 @@ import SectionHeader from "@/components/SectionHeader";
 
 export default function Skills() {
   return (
-    <div className="app-container pt-14 md:pt-24" id="skills">
+    <div className="app-container mt-14 md:mt-44" id="skills">
       <div className="text-center">
         <SectionHeader
           heading="My Skills"

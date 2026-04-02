@@ -9,6 +9,7 @@ export default function Button({
   link,
   defaultClass = "bg-accent text-background hover:text-foreground",
   hoverClass = "bg-primary",
+  target = "",
 }: {
   firstText: React.ReactNode;
   secondText: React.ReactNode;
@@ -16,10 +17,12 @@ export default function Button({
   link: string;
   defaultClass?: string;
   hoverClass?: string;
+  target?: string;
 }) {
   return (
     <Link
       href={link}
+      target={target}
       className={`group relative overflow-hidden inline-flex items-center justify-center ${defaultClass} rounded-4xl font-bold`}
     >
       {/* 👇 Invisible layout spacer */}

@@ -7,7 +7,7 @@ export default function VsCodIcon({ className }: { className: string }) {
       viewBox="0 0 20 20"
       className={className}
     >
-      <g clip-path="url(#clip0_116_1164)">
+      <g clipPath="url(#clip0_116_1164)">
         <path
           d="M0.190284 6.97428C0.190284 6.97428 -0.296843 6.61936 0.287709 6.14543L1.64963 4.91446C1.64963 4.91446 2.03934 4.50002 2.45137 4.86111L15.0192 14.4792V19.0912C15.0192 19.0912 15.0132 19.8154 14.0937 19.7354L0.190284 6.97428Z"
           fill="currentColor"

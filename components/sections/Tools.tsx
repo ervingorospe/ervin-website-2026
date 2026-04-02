@@ -56,7 +56,7 @@ const tools2 = [
 
 export default function Tools() {
   return (
-    <div className="app-container pt-14 md:pt-24" id="about">
+    <div className="app-container mt-14 md:mt-44">
       <div className="text-center">
         <SectionHeader
           heading="Additional Skills/Tools"
