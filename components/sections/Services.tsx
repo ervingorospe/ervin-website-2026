@@ -69,7 +69,7 @@ export default function Services() {
             <div className="grid gap-4 mt-6">
               {list.checkList?.map((items, idx) => (
                 <div key={idx} className="flex items-center space-x-2">
-                  <CircleCheckIcon className="h-5 w-5 text-accent shrink-0" />
+                  <CircleCheckIcon className="h-3 w-3 text-accent shrink-0" />
                   <p className="text-heading font-semibold">{items}</p>
                 </div>
               ))}
