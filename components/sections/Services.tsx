@@ -53,7 +53,7 @@ export default function Services() {
           dividerWidth="w-[115px]"
         />
       </div>
-      <div className="grid grid-cols-3 gap-10 mt-12">
+      <div className="grid md:grid-cols-3 gap-10 mt-12">
         {services?.map((list) => (
           <Paper
             key={list.service}

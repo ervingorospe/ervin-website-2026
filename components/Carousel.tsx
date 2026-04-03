@@ -123,7 +123,7 @@ export default function Carousel() {
                           height={500}
                           loading="lazy"
                           alt={project.title}
-                          className="h-full object-cover object-top  transition-transform duration-700 ease-in-out hover:scale-125"
+                          className="h-full w-auto object-cover object-top  transition-transform duration-700 ease-in-out hover:scale-125"
                         />
                       </div>
 
