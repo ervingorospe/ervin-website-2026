@@ -7,7 +7,7 @@ import Link from "next/link";
 import Button from "@/components/Button";
 
 export default function MenuNav() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="relative block sm:hidden">
