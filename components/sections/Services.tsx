@@ -45,7 +45,7 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="app-container mt-14 md:mt-44" id="Services">
+    <div className="app-container mt-14 md:mt-44" id="services">
       <div className="text-center">
         <SectionHeader
           heading="My Services"

@@ -9,7 +9,7 @@ import ContactForm from "@/components/sections/ContactForm";
 
 export default function Contact() {
   return (
-    <div className="app-container mt-14 md:mt-44" id="Contact">
+    <div className="app-container mt-14 md:mt-44" id="contact">
       <div className="grid md:grid-cols-2 gap-10 md:gap-24 items-start">
         <ContactForm />
         <Paper className="border p-6 border-primary rounded-4xl">

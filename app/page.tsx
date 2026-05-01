@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Header />
 
-      <main>
+      <main className="mx-auto max-w-480 overflow-hidden">
         <Hero />
         <About />
         <Skills />

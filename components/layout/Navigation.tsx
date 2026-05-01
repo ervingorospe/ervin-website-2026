@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-const menu = [
+export const menu = [
   {
     label: "About",
     link: "#about",

@@ -5,7 +5,7 @@ import Carousel from "@/components/Carousel";
 
 export default function Projects() {
   return (
-    <div className="app-container mt-14 md:mt-44" id="Projects">
+    <div className="app-container mt-14 md:mt-44" id="projects">
       <div className="text-center">
         <SectionHeader
           heading="Projects"

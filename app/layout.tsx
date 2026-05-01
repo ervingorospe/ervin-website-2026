@@ -34,7 +34,7 @@ export default function RootLayout({
       className={`${inter.variable} antialiased`}
       suppressHydrationWarning={true}
     >
-      <body className="mx-auto max-w-480">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
