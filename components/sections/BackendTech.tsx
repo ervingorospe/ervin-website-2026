@@ -9,6 +9,10 @@ import AuthIcon from "@/components/icons/AuthIcon";
 import ServerIcon from "@/components/icons/ServerIcon";
 import Node from "@/components/Node";
 
+// animation
+import { motion, AnimatePresence } from "framer-motion";
+import { animateBtmToUp } from "@/animation/framer-motion";
+
 const nodes = [
   {
     type: "NodeJs",
@@ -62,7 +66,10 @@ export default function BackendTech({
   onClick: (type: string) => void;
 }) {
   return (
-    <div className="order-first lg:order-last mt-24 lg:mt-0 w-full flex flex-col items-center">
+    <motion.div
+      variants={animateBtmToUp}
+      className="order-first lg:order-last mt-24 lg:mt-0 w-full flex flex-col items-center"
+    >
       {/* ICON ROW */}
       <div className="relative w-full items-end flex justify-between max-w-5xl px-8">
         {/* Node */}
@@ -88,6 +95,6 @@ export default function BackendTech({
       >
         <h2 className="text-lg sm:text-2xl font-bold">{"</> Backend"}</h2>
       </div>
-    </div>
+    </motion.div>
   );
 }

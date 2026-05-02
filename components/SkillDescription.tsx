@@ -2,6 +2,7 @@
 
 import Card from "@/components/Card";
 import { motion, AnimatePresence } from "framer-motion";
+import { animateBtmToUp } from "@/animation/framer-motion";
 
 export default function SkillDescription({
   selectedContent,
@@ -10,7 +11,10 @@ export default function SkillDescription({
   selectedContent: any;
 }) {
   return (
-    <div className="relative overflow-hidden sm:min-h-[350px] min-h-[550px] lg:min-h-[420px]">
+    <motion.div
+      variants={animateBtmToUp}
+      className="relative overflow-hidden sm:min-h-[350px] min-h-[550px] lg:min-h-[420px]"
+    >
       <AnimatePresence mode="wait">
         {selectedContent && (
           <motion.div
@@ -45,6 +49,6 @@ export default function SkillDescription({
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 }

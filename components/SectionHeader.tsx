@@ -1,5 +1,8 @@
 "use client";
 
+import { motion } from "framer-motion";
+import { animateBtmToUp } from "@/animation/framer-motion";
+
 export default function SectionHeader({
   heading,
   subHeading,
@@ -11,13 +14,20 @@ export default function SectionHeader({
 }) {
   return (
     <div className="text-center">
-      <h2 className="text-3xl md:text-4xl font-bold text-heading">
+      <motion.h2
+        variants={animateBtmToUp}
+        className="text-3xl md:text-4xl font-bold text-heading"
+      >
         {heading}
         <span
           className={`block h-[4px] ${dividerWidth} bg-primary mt-1 mx-auto`}
         ></span>
-      </h2>
-      {subHeading && <h3 className="mt-4">{subHeading}</h3>}
+      </motion.h2>
+      {subHeading && (
+        <motion.h3 variants={animateBtmToUp} className="mt-4">
+          {subHeading}
+        </motion.h3>
+      )}
     </div>
   );
 }

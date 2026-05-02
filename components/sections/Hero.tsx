@@ -6,9 +6,14 @@ import Image from "next/image";
 import Button from "@/components/Button";
 import SocialMedias from "@/components/SocialMedias";
 
+import { motion } from "framer-motion";
+import AnimationContainer from "@/components/layout/AnimationContainer";
+import { animateBtmToUp } from "@/animation/framer-motion";
+import { a } from "framer-motion/client";
+
 export default function Hero() {
   return (
-    <div className="relative h-140 w-full">
+    <AnimationContainer className="relative h-140 w-full">
       <div className="absolute inset-0 z-0">
         <Image
           className="h-full w-full blur-[3px]"
@@ -36,26 +41,38 @@ export default function Hero() {
       <div className="app-container relative grid gap-4 md:flex h-full items-center justify-between">
         <div className="grid gap-5 mt-16 md:mt-0">
           <div className="grid gap-2">
-            <h1 className="text-heading text-4xl md:text-5xl font-black ">
+            <motion.h1
+              variants={animateBtmToUp}
+              className="text-heading text-4xl md:text-5xl font-black "
+            >
               Hi, I&lsquo;m Ervin
-            </h1>
-            <h2 className="text-accent text-xl md:text-2xl font-bold">
+            </motion.h1>
+            <motion.h2
+              variants={animateBtmToUp}
+              className="text-accent text-xl md:text-2xl font-bold"
+            >
               Full-stack Developer
-            </h2>
+            </motion.h2>
           </div>
-          <div className="flex md:hidden">
+          <motion.div variants={animateBtmToUp} className="flex md:hidden">
             <div className="flex gap-3">
               <SocialMedias />
             </div>
-          </div>
-          <p className="prose max-w-lg text-lg font-normal">
+          </motion.div>
+          <motion.p
+            variants={animateBtmToUp}
+            className="prose max-w-lg text-lg font-normal"
+          >
             I am a Full-Stack Developer specializing in React, Next.js, and
             Node.js—building seamless and scalable web applications.
-          </p>
-          <h3 className="text-primary text-xl md:text-2xl font-bold">
+          </motion.p>
+          <motion.h3
+            variants={animateBtmToUp}
+            className="text-primary text-xl md:text-2xl font-bold"
+          >
             4+ years of experience
-          </h3>
-          <div className="flex">
+          </motion.h3>
+          <motion.div variants={animateBtmToUp} className="flex">
             <Button
               defaultClass="md:text-xl bg-accent text-background hover:text-foreground"
               hoverClass="text-background bg-primary"
@@ -92,12 +109,12 @@ export default function Hero() {
                 </>
               }
             />
-          </div>
+          </motion.div>
         </div>
-        <div className="hidden md:grid gap-6">
+        <motion.div variants={animateBtmToUp} className="hidden md:grid gap-6">
           <SocialMedias />
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </AnimationContainer>
   );
 }

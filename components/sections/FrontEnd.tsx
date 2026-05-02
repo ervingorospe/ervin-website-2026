@@ -16,6 +16,11 @@ import TypescriptIcon from "@/components/icons/TypescriptIcon";
 import TailwindIcon from "@/components/icons/TailwindIcon";
 import MuiIcon from "@/components/icons/MuiIcon";
 
+// animation
+import { motion } from "framer-motion";
+import AnimationContainer from "@/components/layout/AnimationContainer";
+import { animateBtmToUp } from "@/animation/framer-motion";
+
 const contents = [
   {
     type: "Frontend",
@@ -91,21 +96,29 @@ export default function FrontEnd() {
   );
 
   return (
-    <div className="grid lg:grid-cols-2 gap-12 items-center">
-      <div className="flex items-center justify-center sm:min-h-[750px] lg:min-h-[520px] xl:min-h-[750px]">
-        <RadialTechLarge
-          type={type}
-          onClick={(type: string) => setType(type)}
-        />
-        <RadialTechSmall
-          type={type}
-          onClick={(type: string) => setType(type)}
-        />
-      </div>
+    <>
+      <AnimationContainer className="grid lg:grid-cols-2 gap-12 items-center">
+        <motion.div
+          variants={animateBtmToUp}
+          className="flex items-center justify-center sm:min-h-[750px] lg:min-h-[520px] xl:min-h-[750px]"
+        >
+          <RadialTechLarge
+            type={type}
+            onClick={(type: string) => setType(type)}
+          />
+          <RadialTechSmall
+            type={type}
+            onClick={(type: string) => setType(type)}
+          />
+        </motion.div>
 
-      <div className="-mt-16 sm:-mt-24 lg:mt-0">
-        <SkillDescription selectedContent={selectedContent} />
-      </div>
-    </div>
+        <motion.div
+          variants={animateBtmToUp}
+          className="-mt-16 sm:-mt-24 lg:mt-0"
+        >
+          <SkillDescription selectedContent={selectedContent} />
+        </motion.div>
+      </AnimationContainer>
+    </>
   );
 }

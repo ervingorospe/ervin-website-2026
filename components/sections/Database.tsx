@@ -11,6 +11,11 @@ import MongoDBIcon from "@/components/icons/MongoDBIcon";
 import FirebaseIcon from "@/components/icons/FirebaseIcon";
 import SupabaseIcon from "@/components/icons/SupabaseIcon";
 
+// animation
+import { motion } from "framer-motion";
+import { animateBtmToUp } from "@/animation/framer-motion";
+import AnimationContainer from "../layout/AnimationContainer";
+
 const contents = [
   {
     type: "Database",
@@ -65,22 +70,24 @@ export default function Database() {
   );
 
   return (
-    <div className="grid mt-16 lg:grid-cols-2 gap-8 items-center">
-      <div className="grid gap-4">
-        {contents?.map((content) => (
-          <div
-            className={`border ${content.title === selectedContent?.title ? "bg-primary text-paper" : "bg-transparent text-primary"} border-primary py-2 min-w-[270px] max-w-[400px] mx-auto  cursor-pointer hover:bg-primary hover:text-paper transition-colors duration-700 ease-in-out`}
-            key={content.title}
-            onClick={() => setType(content.type)}
-          >
-            <div className="flex justify-center items-center space-x-2">
-              {content.icon}
-              <div className="font-bold text-lg">{content.title}</div>
+    <>
+      <AnimationContainer className="grid mt-16 lg:grid-cols-2 gap-8 items-center">
+        <motion.div variants={animateBtmToUp} className="grid gap-4">
+          {contents?.map((content) => (
+            <div
+              className={`border ${content.title === selectedContent?.title ? "bg-primary text-paper" : "bg-transparent text-primary"} border-primary py-2 min-w-[270px] max-w-[400px] mx-auto  cursor-pointer hover:bg-primary hover:text-paper transition-colors duration-700 ease-in-out`}
+              key={content.title}
+              onClick={() => setType(content.type)}
+            >
+              <div className="flex justify-center items-center space-x-2">
+                {content.icon}
+                <div className="font-bold text-lg">{content.title}</div>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-      <SkillDescription selectedContent={selectedContent} />
-    </div>
+          ))}
+        </motion.div>
+        <SkillDescription selectedContent={selectedContent} />
+      </AnimationContainer>
+    </>
   );
 }

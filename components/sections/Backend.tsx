@@ -14,6 +14,9 @@ import RestApiIcon from "@/components/icons/RestApiIcon";
 import AuthIcon from "@/components/icons/AuthIcon";
 import ServerIcon from "@/components/icons/ServerIcon";
 
+// animation
+import AnimationContainer from "@/components/layout/AnimationContainer";
+
 const contents = [
   {
     type: "Backend",
@@ -82,9 +85,11 @@ export default function BackEnd() {
   );
 
   return (
-    <div className="grid mt-16 mb-42 lg:grid-cols-2 gap-12 items-center">
-      <SkillDescription selectedContent={selectedContent} />
-      <BackendTech type={type} onClick={(type) => setType(type)} />
-    </div>
+    <>
+      <AnimationContainer className="grid mt-16 mb-42 lg:grid-cols-2 gap-12 items-center">
+        <SkillDescription selectedContent={selectedContent} />
+        <BackendTech type={type} onClick={(type) => setType(type)} />
+      </AnimationContainer>
+    </>
   );
 }

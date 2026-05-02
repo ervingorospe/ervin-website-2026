@@ -12,6 +12,11 @@ import DockerIcon from "@/components/icons/DockerIcon";
 import GithubIcon from "@/components/icons/GithubIcon";
 import FigmaIcon from "@/components/icons/FigmaIcon";
 
+// animation
+import { motion } from "framer-motion";
+import AnimationContainer from "@/components/layout/AnimationContainer";
+import { animateBtmToUp } from "@/animation/framer-motion";
+
 const tools1 = [
   {
     icon: <AwsIcon className="h-6 w-auto " />,
@@ -57,43 +62,47 @@ const tools2 = [
 export default function Tools() {
   return (
     <div className="app-container mt-14 md:mt-44">
-      <div className="text-center">
+      <AnimationContainer className="text-center">
         <SectionHeader
           heading="Additional Skills/Tools"
           subHeading="Passionate about turning ideas into fast, scalable, and impactful digital experiences."
           dividerWidth="w-[275px]"
         />
-      </div>
-      <div className="mt-12 flex flex-wrap justify-center gap-6 text-primary">
-        {tools1?.map((tool) => (
-          <Paper
-            key={tool.label}
-            className="text-center rounded-4xl 
+      </AnimationContainer>
+      <AnimationContainer>
+        <div className="mt-12 flex flex-wrap justify-center gap-6 text-primary">
+          {tools1?.map((tool) => (
+            <motion.div variants={animateBtmToUp} key={tool.label}>
+              <Paper
+                className="text-center rounded-4xl 
                  w-full sm:w-[45%] md:w-[200px] 
                  py-2 border border-primary"
-          >
-            <div className="flex items-center justify-center space-x-2">
-              {tool.icon}
-              <span className="font-bold">{tool.label}</span>
-            </div>
-          </Paper>
-        ))}
-      </div>
-      <div className="mt-6 flex flex-wrap justify-center gap-6 text-primary">
-        {tools2?.map((tool) => (
-          <Paper
-            key={tool.label}
-            className="text-center rounded-4xl 
+              >
+                <div className="flex items-center justify-center space-x-2">
+                  {tool.icon}
+                  <span className="font-bold">{tool.label}</span>
+                </div>
+              </Paper>
+            </motion.div>
+          ))}
+        </div>
+        <div className="mt-6 flex flex-wrap justify-center gap-6 text-primary">
+          {tools2?.map((tool) => (
+            <motion.div variants={animateBtmToUp} key={tool.label}>
+              <Paper
+                className="text-center rounded-4xl 
                  w-full sm:w-[45%] md:w-[200px] 
                  py-2 border border-primary"
-          >
-            <div className="flex items-center justify-center space-x-2">
-              {tool.icon}
-              <span className="font-bold">{tool.label}</span>
-            </div>
-          </Paper>
-        ))}
-      </div>
+              >
+                <div className="flex items-center justify-center space-x-2">
+                  {tool.icon}
+                  <span className="font-bold">{tool.label}</span>
+                </div>
+              </Paper>
+            </motion.div>
+          ))}
+        </div>
+      </AnimationContainer>
     </div>
   );
 }
