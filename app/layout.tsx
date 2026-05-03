@@ -20,7 +20,35 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Ervin Gorospe",
-  description: "Software Developer base in Philippines",
+  description:
+    "Software Developer, Web Developer, Mobile Developer, Front-end Developer, Back-end Developer",
+  manifest: "/site.webmanifest",
+
+  openGraph: {
+    title: "Ervin Gorospe",
+    description:
+      "Software Developer, Web Developer, Mobile Developer, Front-end Developer, Back-end Developer",
+    url: "https://ervin-gorospe.vercel.app",
+    siteName: "Ervin Gorospe",
+    images: [
+      {
+        url: "/ervin-og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Ervin Gorospe Portfolio",
+      },
+    ],
+    locale: "en_PH",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Ervin Gorospe",
+    description:
+      "Software Developer, Web Developer, Mobile Developer, Front-end Developer, Back-end Developer",
+    images: ["/ervin-og-image.png"],
+  },
 };
 
 export default function RootLayout({
