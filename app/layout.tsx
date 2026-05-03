@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Ervin Gorospe",
     images: [
       {
-        url: "/ervin-og-image.png",
+        url: "https://ervin-gorospe.vercel.app/ervin-og-image.png",
         width: 1200,
         height: 630,
         alt: "Ervin Gorospe Portfolio",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Ervin Gorospe | Software Developer",
     description:
       "Software developer in the Philippines specializing in web and backend development. View projects, experience, and contact details.",
-    images: ["/ervin-og-image.png"],
+    images: ["https://ervin-gorospe.vercel.app/ervin-og-image.png"],
   },
   metadataBase: new URL("https://ervin-gorospe.vercel.app"),
   alternates: {
