@@ -2,16 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -19,15 +9,25 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Ervin Gorospe",
+  title: "Ervin Gorospe | Software Developer",
   description:
-    "Software Developer, Web Developer, Mobile Developer, Front-end Developer, Back-end Developer",
+    "Software developer in the Philippines specializing in web and backend development. View projects, experience, and contact details.",
   manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
 
   openGraph: {
-    title: "Ervin Gorospe",
+    title: "Ervin Gorospe | Software Developer",
     description:
-      "Software Developer, Web Developer, Mobile Developer, Front-end Developer, Back-end Developer",
+      "Software developer in the Philippines specializing in web and backend development. View projects, experience, and contact details.",
     url: "https://ervin-gorospe.vercel.app",
     siteName: "Ervin Gorospe",
     images: [
@@ -44,10 +44,14 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Ervin Gorospe",
+    title: "Ervin Gorospe | Software Developer",
     description:
-      "Software Developer, Web Developer, Mobile Developer, Front-end Developer, Back-end Developer",
+      "Software developer in the Philippines specializing in web and backend development. View projects, experience, and contact details.",
     images: ["/ervin-og-image.png"],
+  },
+  metadataBase: new URL("https://ervin-gorospe.vercel.app"),
+  alternates: {
+    canonical: "/",
   },
 };
 
@@ -62,6 +66,25 @@ export default function RootLayout({
       className={`${inter.variable} antialiased`}
       suppressHydrationWarning={true}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Ervin Gorospe",
+              url: "https://ervin-gorospe.vercel.app",
+              jobTitle: "Software Developer",
+              image: "https://ervin-gorospe.vercel.app/ervin-og-image.png",
+              sameAs: [
+                "https://github.com/ervingorospe",
+                "https://linkedin.com/in/ervin-gorospe-dev0109",
+              ],
+            }),
+          }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
