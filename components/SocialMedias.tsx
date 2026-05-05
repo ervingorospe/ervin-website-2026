@@ -36,7 +36,7 @@ const socialMedias = [
     ),
   },
   {
-    link: "https://www.linkedin.com/in/ervin-gorospe-118b93361/",
+    link: "https://www.linkedin.com/in/ervin-gorospe-dev0109/",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
